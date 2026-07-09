@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. Compose supplies the real Material 3 theming; this
+         XML theme only styles the window/splash before Compose renders. Parented on a
+         platform theme to avoid depending on the Views Material Components library. -->
+    <style name="Theme.DoseTrack" parent="android:Theme.DeviceDefault.DayNight">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

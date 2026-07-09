@@ -4,14 +4,12 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import com.robbrown.dosetrack.ui.navigation.DoseTrackNavHost
+import com.robbrown.dosetrack.ui.theme.DoseTrackTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
- * Single-activity host for the Compose UI. The four-tab navigation shell is wired in
- * during the UI-shell task; for now it renders a placeholder so the project builds.
+ * Single-activity host for the Compose UI. Renders the four-tab navigation shell.
  */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -19,10 +17,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MaterialTheme {
-                Surface {
-                    Text("DoseTrack")
-                }
+            DoseTrackTheme {
+                DoseTrackNavHost()
             }
         }
     }

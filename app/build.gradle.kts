@@ -59,6 +59,11 @@ android {
     }
 }
 
+// Emit Room schema JSON so future migrations can be verified against history.
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
+}
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

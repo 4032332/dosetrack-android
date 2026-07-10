@@ -69,6 +69,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.activity.compose)
 
     implementation(platform(libs.androidx.compose.bom))
@@ -91,8 +92,11 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.junit)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    debugImplementation(libs.androidx.ui.test.manifest)
     androidTestImplementation(platform(libs.androidx.compose.bom))
 }
